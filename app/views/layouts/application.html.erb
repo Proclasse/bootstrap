@@ -5,10 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Important! permet le responsive pour mobile -->
+
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <i class="navbar-brand">Essai bootstrap</i>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><%= link_to 'Home', accueil_index_path %></a></li>
+		      <li><%= link_to 'Sam', sam_index_path %></li>
+		      <li><%= link_to 'Titi', titi_index_path %></li>
+		    </ul>
+		  </div>
+		</nav>
+		
+		<%= yield %>
+		
+	</div>
 </body>
 </html>
