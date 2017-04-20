@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Important! permet le responsive pour mobile -->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- test pour les glyphicons, ils ne sont pas dans les fichiers css de bootstrap par défaut -->
 </head>
 <body>
 	<div class="container">
@@ -17,8 +17,8 @@
 		    </div>
 		    <ul class="nav navbar-nav">
 		      <li class="active"><%= link_to 'Home', accueil_index_path %></a></li>
-		      <li><%= link_to 'Sam', sam_index_path %></li>
-		      <li><%= link_to 'Titi', titi_index_path %></li>
+		      <li><%= link_to ' Sam', sam_index_path, class: "glyphicon glyphicon-tree-conifer" %></li>
+		      <li><%= link_to ' Titi', titi_index_path, class: "glyphicon glyphicon-music" %></li>
 		    </ul>
 		  </div>
 		</nav>
