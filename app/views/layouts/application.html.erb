@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Important! permet le responsive pour mobile -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- test pour les glyphicons, ils ne sont pas dans les fichiers css de bootstrap par défaut -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --> <!-- test pour les glyphicons, ils ne sont pas dans les fichiers css de bootstrap par défaut -->
 
 <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -40,11 +40,15 @@
       }
       .row.content {height:auto;} 
     }
+    
+    .malargeur {
+    	width: 150px;
+    }
   </style>
 
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
@@ -60,18 +64,18 @@
 		
 		<div class="container-fluid text-center">    
 		  <div class="row content">
-		    <div class="col-sm-2 sidenav">
+		    <div class="col-md-2 col-lg-1 sidenav">
 		      <p><a href="#">Link</a></p>
 		      <p><a href="#">Link</a></p>
 		      <p><a href="#">Link</a></p>
 		    </div>
-		    <div class="col-sm-8 text-left"> 
+		    <div class="col-sm-5 col-lg-8 text-left"> 
 		      <%= yield %>
 		      <hr>
 		      <h3>Test</h3>
 		      <p>Lorem ipsum...</p>
 		    </div>
-		    <div class="col-sm-2 sidenav">
+		    <div class="col-sm-5 col-lg-3 sidenav">
 		      <div class="well">
 		        <p>ADS</p>
 		      </div>
@@ -87,5 +91,7 @@
 		</footer>
 	
 	</div>
+	
+
 </body>
 </html>
